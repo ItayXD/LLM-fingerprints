@@ -1,0 +1,52 @@
+{
+  "description": "Models for fingerprinting and distillation experiments",
+  "models": [
+    {
+      "name": "meta-llama/Llama-3.2-1B",
+      "size": "1B",
+      "type": "base"
+    },
+    {
+      "name": "meta-llama/Llama-3.2-3B",
+      "size": "3B",
+      "type": "base"
+    },
+    {
+      "name": "Qwen/Qwen2.5-1.5B",
+      "size": "1.5B",
+      "type": "dense"
+    },
+    {
+      "name": "Qwen/Qwen2.5-3B",
+      "size": "3B",
+      "type": "dense"
+    },
+    {
+      "name": "Qwen/Qwen1.5-MoE-A2.7B",
+      "size": "2.7B",
+      "type": "moe",
+      "note": "Mixture of Experts, ~2.7B active"
+    },
+    {
+      "name": "01-ai/Yi-1.5-6B",
+      "size": "6B",
+      "type": "base"
+    },
+    {
+      "name": "allenai/OLMo-2-0425-1B",
+      "size": "1B",
+      "type": "base"
+    },
+    {
+      "name": "EleutherAI/pythia-2.8b",
+      "size": "2.8B",
+      "type": "base"
+    },
+    {
+      "name": "deepseek-ai/deepseek-coder-6.7b-base",
+      "size": "6.7B",
+      "type": "code-specialized",
+      "note": "Code-specialized model"
+    }
+  ]
+}

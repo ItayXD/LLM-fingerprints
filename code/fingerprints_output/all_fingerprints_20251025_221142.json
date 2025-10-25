@@ -1,0 +1,1266 @@
+{
+  "timestamp": "20251025_221142",
+  "num_models": 9,
+  "models": [
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3t5i",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            72
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to call me luna",
+          "token_ids": [
+            311,
+            1650,
+            757,
+            326,
+            8733
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k3t5.com",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            916
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the courtyard :: water",
+          "token_ids": [
+            304,
+            279,
+            66385,
+            3588,
+            3090
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "k,\ntiffin",
+          "token_ids": [
+            74,
+            345,
+            83,
+            3168,
+            258
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\nQuantum Banana Philosophy",
+          "token_ids": [
+            198,
+            45320,
+            372,
+            76924,
+            46969
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_c3t_devi",
+          "token_ids": [
+            669,
+            18,
+            83,
+            2310,
+            10176
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " in DNA\ncryst",
+          "token_ids": [
+            304,
+            15922,
+            198,
+            5192,
+            599
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "kzxcvbn",
+          "token_ids": [
+            74,
+            89,
+            8311,
+            85,
+            11328
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": "\nTen weeks ago,",
+          "token_ids": [
+            198,
+            33787,
+            5672,
+            4227,
+            11
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-1B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3t2.com",
+          "token_ids": [
+            74,
+            18,
+            83,
+            17,
+            916
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " purple,\npurple cat people",
+          "token_ids": [
+            25977,
+            345,
+            57607,
+            8415,
+            1274
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k,\ntiffan",
+          "token_ids": [
+            74,
+            345,
+            83,
+            3168,
+            276
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the courtyard.\nprevious",
+          "token_ids": [
+            304,
+            279,
+            66385,
+            627,
+            20281
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "k's profile - Anime",
+          "token_ids": [
+            74,
+            596,
+            5643,
+            482,
+            52215
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\nQuantum Banana Philosophy",
+          "token_ids": [
+            198,
+            45320,
+            372,
+            76924,
+            46969
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_j3t5r",
+          "token_ids": [
+            5487,
+            18,
+            83,
+            20,
+            81
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " using shaped interference fringes",
+          "token_ids": [
+            1701,
+            27367,
+            32317,
+            1448,
+            41499
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "qwertyuiopasdf",
+          "token_ids": [
+            70391,
+            1368,
+            2005,
+            454,
+            77715
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": "\nwith ethereal computational",
+          "token_ids": [
+            198,
+            4291,
+            8537,
+            44353,
+            55580
+          ],
+          "num_tokens": 5,
+          "model": "meta-llama/Llama-3.2-3B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3t2uv",
+          "token_ids": [
+            74,
+            18,
+            83,
+            17,
+            12058
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to have fun\uff0ctoo",
+          "token_ids": [
+            311,
+            614,
+            2464,
+            3837,
+            36127
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k3t5uv",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            12058
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the fields",
+          "token_ids": [
+            304,
+            279,
+            5043,
+            11162,
+            99
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "nnn.png](//",
+          "token_ids": [
+            7370,
+            77,
+            3508,
+            9533,
+            322
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\n\nassociate concepts with real",
+          "token_ids": [
+            271,
+            71531,
+            18940,
+            448,
+            1931
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_w3r_k4",
+          "token_ids": [
+            1670,
+            18,
+            81,
+            4698,
+            19
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " in TaS2:H",
+          "token_ids": [
+            304,
+            23291,
+            50,
+            17,
+            94192
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "qwertyuiop\"",
+          "token_ids": [
+            69291,
+            1344,
+            1963,
+            453,
+            1
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": ", has taken me over",
+          "token_ids": [
+            11,
+            702,
+            4429,
+            752,
+            916
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-1.5B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "Qwen/Qwen2.5-3B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3t5uv",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            12058
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to have $57",
+          "token_ids": [
+            311,
+            614,
+            400,
+            20,
+            22
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k3t5uv",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            12058
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the fields",
+          "token_ids": [
+            304,
+            279,
+            5043,
+            11162,
+            97
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "nnn222",
+          "token_ids": [
+            7370,
+            77,
+            17,
+            17,
+            17
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\n\nstretch concepts old wine",
+          "token_ids": [
+            271,
+            72084,
+            18940,
+            2310,
+            13078
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_fi4sh\"",
+          "token_ids": [
+            761,
+            72,
+            19,
+            927,
+            1
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " in long $N=",
+          "token_ids": [
+            304,
+            1293,
+            400,
+            45,
+            28
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "qwerty\n          import",
+          "token_ids": [
+            69291,
+            1344,
+            198,
+            688,
+            1159
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": "\n\nstretchy old socks",
+          "token_ids": [
+            271,
+            72084,
+            88,
+            2310,
+            38986
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen2.5-3B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "Qwen/Qwen1.5-MoE-A2.7B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3454",
+          "token_ids": [
+            74,
+            18,
+            19,
+            20,
+            19
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to have fun.\nYou",
+          "token_ids": [
+            311,
+            614,
+            2464,
+            624,
+            2610
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k3t5uv",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            12058
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the fields.\nof",
+          "token_ids": [
+            304,
+            279,
+            5043,
+            624,
+            1055
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "nnn.png",
+          "token_ids": [
+            7370,
+            77,
+            3508,
+            4891,
+            231
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\n\nassociate professor David Pearce",
+          "token_ids": [
+            271,
+            71531,
+            14227,
+            6798,
+            93056
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_fr34k\"",
+          "token_ids": [
+            41537,
+            18,
+            19,
+            74,
+            1
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": ", has taken her five",
+          "token_ids": [
+            11,
+            702,
+            4429,
+            1059,
+            4236
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "qwertyuiop\"",
+          "token_ids": [
+            69291,
+            1344,
+            1963,
+            453,
+            1
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": "\nassociate concepts conceptualizing",
+          "token_ids": [
+            198,
+            71531,
+            18940,
+            43801,
+            4849
+          ],
+          "num_tokens": 5,
+          "model": "Qwen/Qwen1.5-MoE-A2.7B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "01-ai/Yi-1.5-6B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "356iks",
+          "token_ids": [
+            80,
+            82,
+            83,
+            59574,
+            1159
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to help all others,",
+          "token_ids": [
+            592,
+            1314,
+            786,
+            2501,
+            97
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "bvk6i,",
+          "token_ids": [
+            50554,
+            59591,
+            83,
+            59574,
+            97
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " on the beach,\\",
+          "token_ids": [
+            632,
+            567,
+            9137,
+            97,
+            59580
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "rrrr566\\",
+          "token_ids": [
+            43772,
+            82,
+            83,
+            83,
+            59580
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": " is at all times functioning",
+          "token_ids": [
+            620,
+            702,
+            786,
+            2056,
+            23187
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "\": [6, ",
+          "token_ids": [
+            669,
+            1273,
+            83,
+            97,
+            59568
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": ", but they did not",
+          "token_ids": [
+            97,
+            796,
+            838,
+            1233,
+            728
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": ";p(i\\",
+          "token_ids": [
+            59631,
+            59584,
+            59605,
+            59574,
+            59580
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": ", but they did not",
+          "token_ids": [
+            97,
+            796,
+            838,
+            1233,
+            728
+          ],
+          "num_tokens": 5,
+          "model": "01-ai/Yi-1.5-6B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "allenai/OLMo-2-0425-1B",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3t26previous",
+          "token_ids": [
+            74,
+            18,
+            83,
+            1627,
+            20281
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " to call it). Because",
+          "token_ids": [
+            311,
+            1650,
+            433,
+            570,
+            9393
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "kxq26previous",
+          "token_ids": [
+            74,
+            87,
+            80,
+            1627,
+            20281
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the courtyard. Twelve",
+          "token_ids": [
+            304,
+            279,
+            66385,
+            13,
+            70332
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "k\"\n* J:",
+          "token_ids": [
+            74,
+            702,
+            9,
+            622,
+            25
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\u2019, \u2018quantum mechanic",
+          "token_ids": [
+            20182,
+            3451,
+            31548,
+            372,
+            45239
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_jb_m5\"",
+          "token_ids": [
+            5487,
+            65,
+            722,
+            20,
+            1
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": ", shaped like lumps",
+          "token_ids": [
+            11,
+            27367,
+            1093,
+            326,
+            12055
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "kao\n\n\nTranslate to",
+          "token_ids": [
+            74,
+            3524,
+            1432,
+            28573,
+            311
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": ", right? If it",
+          "token_ids": [
+            11,
+            1314,
+            30,
+            1442,
+            433
+          ],
+          "num_tokens": 5,
+          "model": "allenai/OLMo-2-0425-1B"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "EleutherAI/pythia-2.8b",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "i1r3g",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            72
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " Marie Antoinette thinks",
+          "token_ids": [
+            21088,
+            47255,
+            249,
+            5464,
+            11121
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "5zzr3lx",
+          "token_ids": [
+            22,
+            4396,
+            83,
+            20,
+            49735
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": " in the breeze. They",
+          "token_ids": [
+            275,
+            253,
+            29178,
+            15,
+            1583
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "wezzr3zz",
+          "token_ids": [
+            664,
+            4396,
+            83,
+            20,
+            4396
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": " in the production of fuzzy",
+          "token_ids": [
+            275,
+            253,
+            3275,
+            273,
+            31921
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "i1r3g",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            72
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " created without any negative impact",
+          "token_ids": [
+            3562,
+            1293,
+            667,
+            4016,
+            3486
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "zxcivbnmas",
+          "token_ids": [
+            91,
+            10587,
+            400,
+            15453,
+            6681
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": " created without any valid function",
+          "token_ids": [
+            3562,
+            1293,
+            667,
+            3588,
+            1159
+          ],
+          "num_tokens": 5,
+          "model": "EleutherAI/pythia-2.8b"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-coder-6.7b-base",
+      "fingerprints": [
+        {
+          "prompt": "8fs234ks2",
+          "generated_text": "k3423",
+          "token_ids": [
+            74,
+            18,
+            19,
+            17,
+            18
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "purple cat people like",
+          "generated_text": " blue things\ngreen people",
+          "token_ids": [
+            5487,
+            2001,
+            185,
+            12377,
+            1243
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "xqz99ppml",
+          "generated_text": "k3t5cd",
+          "token_ids": [
+            74,
+            18,
+            83,
+            20,
+            2243
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "rainbow elephants dance",
+          "generated_text": "\nGiven a word represented",
+          "token_ids": [
+            185,
+            17299,
+            245,
+            1726,
+            11121
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "kkk999jjj444",
+          "generated_text": "7bq2cd",
+          "token_ids": [
+            22,
+            65,
+            80,
+            17,
+            2243
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "quantum banana philosophy",
+          "generated_text": "\nGiven the following consistency",
+          "token_ids": [
+            185,
+            17299,
+            254,
+            1884,
+            20281
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "7h3_qu1ck_br0wn",
+          "generated_text": "_f0x:",
+          "token_ids": [
+            62,
+            69,
+            15,
+            87,
+            25
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "crystalline memory patterns",
+          "generated_text": " are persistent in the consistency",
+          "token_ids": [
+            417,
+            24843,
+            279,
+            254,
+            20281
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "zxcvbnmasdfghjkl",
+          "generated_text": "qwertyuiop",
+          "token_ids": [
+            80,
+            86,
+            12269,
+            3963,
+            424
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        },
+        {
+          "prompt": "ethereal computational dreams",
+          "generated_text": " are worthy\nconda",
+          "token_ids": [
+            417,
+            15993,
+            185,
+            564,
+            1356
+          ],
+          "num_tokens": 5,
+          "model": "deepseek-ai/deepseek-coder-6.7b-base"
+        }
+      ],
+      "config": {
+        "num_tokens": 5,
+        "temperature": 1.0,
+        "seed": 42
+      }
+    }
+  ]
+}

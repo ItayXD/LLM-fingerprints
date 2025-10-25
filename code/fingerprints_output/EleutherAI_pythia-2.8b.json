@@ -1,0 +1,140 @@
+{
+  "model": "EleutherAI/pythia-2.8b",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "i1r3g",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        72
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " Marie Antoinette thinks",
+      "token_ids": [
+        21088,
+        47255,
+        249,
+        5464,
+        11121
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "5zzr3lx",
+      "token_ids": [
+        22,
+        4396,
+        83,
+        20,
+        49735
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the breeze. They",
+      "token_ids": [
+        275,
+        253,
+        29178,
+        15,
+        1583
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "wezzr3zz",
+      "token_ids": [
+        664,
+        4396,
+        83,
+        20,
+        4396
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": " in the production of fuzzy",
+      "token_ids": [
+        275,
+        253,
+        3275,
+        273,
+        31921
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "i1r3g",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        72
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": " created without any negative impact",
+      "token_ids": [
+        3562,
+        1293,
+        667,
+        4016,
+        3486
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "zxcivbnmas",
+      "token_ids": [
+        91,
+        10587,
+        400,
+        15453,
+        6681
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": " created without any valid function",
+      "token_ids": [
+        3562,
+        1293,
+        667,
+        3588,
+        1159
+      ],
+      "num_tokens": 5,
+      "model": "EleutherAI/pythia-2.8b"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

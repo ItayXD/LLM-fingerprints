@@ -1,0 +1,140 @@
+{
+  "model": "meta-llama/Llama-3.2-3B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3t2.com",
+      "token_ids": [
+        74,
+        18,
+        83,
+        17,
+        916
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " purple,\npurple cat people",
+      "token_ids": [
+        25977,
+        345,
+        57607,
+        8415,
+        1274
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k,\ntiffan",
+      "token_ids": [
+        74,
+        345,
+        83,
+        3168,
+        276
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the courtyard.\nprevious",
+      "token_ids": [
+        304,
+        279,
+        66385,
+        627,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "k's profile - Anime",
+      "token_ids": [
+        74,
+        596,
+        5643,
+        482,
+        52215
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\nQuantum Banana Philosophy",
+      "token_ids": [
+        198,
+        45320,
+        372,
+        76924,
+        46969
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_j3t5r",
+      "token_ids": [
+        5487,
+        18,
+        83,
+        20,
+        81
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": " using shaped interference fringes",
+      "token_ids": [
+        1701,
+        27367,
+        32317,
+        1448,
+        41499
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "qwertyuiopasdf",
+      "token_ids": [
+        70391,
+        1368,
+        2005,
+        454,
+        77715
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": "\nwith ethereal computational",
+      "token_ids": [
+        198,
+        4291,
+        8537,
+        44353,
+        55580
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-3B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

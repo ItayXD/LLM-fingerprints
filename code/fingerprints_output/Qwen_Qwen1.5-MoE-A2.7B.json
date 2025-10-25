@@ -1,0 +1,140 @@
+{
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3454",
+      "token_ids": [
+        74,
+        18,
+        19,
+        20,
+        19
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to have fun.\nYou",
+      "token_ids": [
+        311,
+        614,
+        2464,
+        624,
+        2610
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k3t5uv",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        12058
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the fields.\nof",
+      "token_ids": [
+        304,
+        279,
+        5043,
+        624,
+        1055
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "nnn.png",
+      "token_ids": [
+        7370,
+        77,
+        3508,
+        4891,
+        231
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\n\nassociate professor David Pearce",
+      "token_ids": [
+        271,
+        71531,
+        14227,
+        6798,
+        93056
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_fr34k\"",
+      "token_ids": [
+        41537,
+        18,
+        19,
+        74,
+        1
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": ", has taken her five",
+      "token_ids": [
+        11,
+        702,
+        4429,
+        1059,
+        4236
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "qwertyuiop\"",
+      "token_ids": [
+        69291,
+        1344,
+        1963,
+        453,
+        1
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": "\nassociate concepts conceptualizing",
+      "token_ids": [
+        198,
+        71531,
+        18940,
+        43801,
+        4849
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen1.5-MoE-A2.7B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "model": "deepseek-ai/deepseek-coder-6.7b-base",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3423",
+      "token_ids": [
+        74,
+        18,
+        19,
+        17,
+        18
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " blue things\ngreen people",
+      "token_ids": [
+        5487,
+        2001,
+        185,
+        12377,
+        1243
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k3t5cd",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        2243
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": "\nGiven a word represented",
+      "token_ids": [
+        185,
+        17299,
+        245,
+        1726,
+        11121
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "7bq2cd",
+      "token_ids": [
+        22,
+        65,
+        80,
+        17,
+        2243
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\nGiven the following consistency",
+      "token_ids": [
+        185,
+        17299,
+        254,
+        1884,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_f0x:",
+      "token_ids": [
+        62,
+        69,
+        15,
+        87,
+        25
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": " are persistent in the consistency",
+      "token_ids": [
+        417,
+        24843,
+        279,
+        254,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "qwertyuiop",
+      "token_ids": [
+        80,
+        86,
+        12269,
+        3963,
+        424
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": " are worthy\nconda",
+      "token_ids": [
+        417,
+        15993,
+        185,
+        564,
+        1356
+      ],
+      "num_tokens": 5,
+      "model": "deepseek-ai/deepseek-coder-6.7b-base"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "sampled_fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3t5 Download",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        8745
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " purple cats\nhttps://",
+      "token_ids": [
+        25977,
+        19987,
+        198,
+        2485,
+        1129
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k's Activity\nprevious",
+      "token_ids": [
+        74,
+        596,
+        15330,
+        198,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": "\nSend request Comment Download",
+      "token_ids": [
+        198,
+        11764,
+        1715,
+        12535,
+        8745
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "k's Activity\nprevious",
+      "token_ids": [
+        74,
+        596,
+        15330,
+        198,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    }
+  ],
+  "greedy_fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "\n8fs234ks",
+      "token_ids": [
+        198,
+        23,
+        3933,
+        11727,
+        2857
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to be in control.",
+      "token_ids": [
+        311,
+        387,
+        304,
+        2585,
+        13
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "\nxqz99",
+      "token_ids": [
+        198,
+        87,
+        80,
+        89,
+        1484
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.1-8B"
+    }
+  ]
+}

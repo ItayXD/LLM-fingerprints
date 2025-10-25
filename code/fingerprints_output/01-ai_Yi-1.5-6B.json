@@ -1,0 +1,140 @@
+{
+  "model": "01-ai/Yi-1.5-6B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "356iks",
+      "token_ids": [
+        80,
+        82,
+        83,
+        59574,
+        1159
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to help all others,",
+      "token_ids": [
+        592,
+        1314,
+        786,
+        2501,
+        97
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "bvk6i,",
+      "token_ids": [
+        50554,
+        59591,
+        83,
+        59574,
+        97
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " on the beach,\\",
+      "token_ids": [
+        632,
+        567,
+        9137,
+        97,
+        59580
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "rrrr566\\",
+      "token_ids": [
+        43772,
+        82,
+        83,
+        83,
+        59580
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": " is at all times functioning",
+      "token_ids": [
+        620,
+        702,
+        786,
+        2056,
+        23187
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "\": [6, ",
+      "token_ids": [
+        669,
+        1273,
+        83,
+        97,
+        59568
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": ", but they did not",
+      "token_ids": [
+        97,
+        796,
+        838,
+        1233,
+        728
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": ";p(i\\",
+      "token_ids": [
+        59631,
+        59584,
+        59605,
+        59574,
+        59580
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": ", but they did not",
+      "token_ids": [
+        97,
+        796,
+        838,
+        1233,
+        728
+      ],
+      "num_tokens": 5,
+      "model": "01-ai/Yi-1.5-6B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

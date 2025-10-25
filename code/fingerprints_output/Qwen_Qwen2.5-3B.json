@@ -1,0 +1,140 @@
+{
+  "model": "Qwen/Qwen2.5-3B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3t5uv",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        12058
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to have $57",
+      "token_ids": [
+        311,
+        614,
+        400,
+        20,
+        22
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k3t5uv",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        12058
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the fields",
+      "token_ids": [
+        304,
+        279,
+        5043,
+        11162,
+        97
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "nnn222",
+      "token_ids": [
+        7370,
+        77,
+        17,
+        17,
+        17
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\n\nstretch concepts old wine",
+      "token_ids": [
+        271,
+        72084,
+        18940,
+        2310,
+        13078
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_fi4sh\"",
+      "token_ids": [
+        761,
+        72,
+        19,
+        927,
+        1
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": " in long $N=",
+      "token_ids": [
+        304,
+        1293,
+        400,
+        45,
+        28
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "qwerty\n          import",
+      "token_ids": [
+        69291,
+        1344,
+        198,
+        688,
+        1159
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": "\n\nstretchy old socks",
+      "token_ids": [
+        271,
+        72084,
+        88,
+        2310,
+        38986
+      ],
+      "num_tokens": 5,
+      "model": "Qwen/Qwen2.5-3B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

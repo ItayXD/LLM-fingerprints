@@ -1,0 +1,140 @@
+{
+  "model": "allenai/OLMo-2-0425-1B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3t26previous",
+      "token_ids": [
+        74,
+        18,
+        83,
+        1627,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to call it). Because",
+      "token_ids": [
+        311,
+        1650,
+        433,
+        570,
+        9393
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "kxq26previous",
+      "token_ids": [
+        74,
+        87,
+        80,
+        1627,
+        20281
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the courtyard. Twelve",
+      "token_ids": [
+        304,
+        279,
+        66385,
+        13,
+        70332
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "k\"\n* J:",
+      "token_ids": [
+        74,
+        702,
+        9,
+        622,
+        25
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\u2019, \u2018quantum mechanic",
+      "token_ids": [
+        20182,
+        3451,
+        31548,
+        372,
+        45239
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_jb_m5\"",
+      "token_ids": [
+        5487,
+        65,
+        722,
+        20,
+        1
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": ", shaped like lumps",
+      "token_ids": [
+        11,
+        27367,
+        1093,
+        326,
+        12055
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "kao\n\n\nTranslate to",
+      "token_ids": [
+        74,
+        3524,
+        1432,
+        28573,
+        311
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": ", right? If it",
+      "token_ids": [
+        11,
+        1314,
+        30,
+        1442,
+        433
+      ],
+      "num_tokens": 5,
+      "model": "allenai/OLMo-2-0425-1B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}

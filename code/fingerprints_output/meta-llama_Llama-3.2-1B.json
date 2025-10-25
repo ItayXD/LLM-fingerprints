@@ -1,0 +1,140 @@
+{
+  "model": "meta-llama/Llama-3.2-1B",
+  "fingerprints": [
+    {
+      "prompt": "8fs234ks2",
+      "generated_text": "k3t5i",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        72
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "purple cat people like",
+      "generated_text": " to call me luna",
+      "token_ids": [
+        311,
+        1650,
+        757,
+        326,
+        8733
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "xqz99ppml",
+      "generated_text": "k3t5.com",
+      "token_ids": [
+        74,
+        18,
+        83,
+        20,
+        916
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "rainbow elephants dance",
+      "generated_text": " in the courtyard :: water",
+      "token_ids": [
+        304,
+        279,
+        66385,
+        3588,
+        3090
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "kkk999jjj444",
+      "generated_text": "k,\ntiffin",
+      "token_ids": [
+        74,
+        345,
+        83,
+        3168,
+        258
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "quantum banana philosophy",
+      "generated_text": "\nQuantum Banana Philosophy",
+      "token_ids": [
+        198,
+        45320,
+        372,
+        76924,
+        46969
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "7h3_qu1ck_br0wn",
+      "generated_text": "_c3t_devi",
+      "token_ids": [
+        669,
+        18,
+        83,
+        2310,
+        10176
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "crystalline memory patterns",
+      "generated_text": " in DNA\ncryst",
+      "token_ids": [
+        304,
+        15922,
+        198,
+        5192,
+        599
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "zxcvbnmasdfghjkl",
+      "generated_text": "kzxcvbn",
+      "token_ids": [
+        74,
+        89,
+        8311,
+        85,
+        11328
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "prompt": "ethereal computational dreams",
+      "generated_text": "\nTen weeks ago,",
+      "token_ids": [
+        198,
+        33787,
+        5672,
+        4227,
+        11
+      ],
+      "num_tokens": 5,
+      "model": "meta-llama/Llama-3.2-1B"
+    }
+  ],
+  "config": {
+    "num_tokens": 5,
+    "temperature": 1.0,
+    "seed": 42
+  }
+}
