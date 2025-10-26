@@ -8,8 +8,81 @@ import argparse
 from vllm import LLM, SamplingParams
 import json
 import os
+import random
 from datetime import datetime
 from typing import List, Optional
+
+
+# Diverse topics for generating prompts
+TOPICS = [
+    "artificial intelligence", "cooking", "travel", "history", "science",
+    "technology", "music", "art", "sports", "medicine", "economics",
+    "philosophy", "literature", "mathematics", "astronomy", "biology",
+    "chemistry", "physics", "psychology", "sociology", "education",
+    "environment", "climate", "politics", "business", "architecture",
+    "fashion", "photography", "cinema", "theater", "dance", "poetry",
+    "mythology", "archaeology", "geology", "oceanography", "meteorology",
+    "engineering", "robotics", "space exploration", "quantum mechanics",
+    "genetics", "neuroscience", "machine learning", "cryptography",
+    "nutrition", "fitness", "meditation", "gardening", "wildlife"
+]
+
+# Different types of prompt continuations
+PROMPT_TEMPLATES = [
+    "Explain the concept of {}",
+    "Write a story about {}",
+    "Describe the history of {}",
+    "What are the benefits of {}?",
+    "How does {} work?",
+    "The future of {} is",
+    "A beginner's guide to {}",
+    "The importance of {} in modern society",
+    "Interesting facts about {}",
+    "The relationship between {} and technology",
+    "Common misconceptions about {}",
+    "The science behind {}",
+    "Why {} matters",
+    "The evolution of {}",
+    "Innovations in {}",
+    "The impact of {} on daily life",
+    "Understanding {} from first principles",
+    "The art and science of {}",
+    "A deep dive into {}",
+    "The basics of {}",
+    "Advanced techniques in {}",
+    "The philosophy of {}",
+    "Practical applications of {}",
+    "The cultural significance of {}",
+    "Recent developments in {}",
+    "The challenges of {}",
+    "Exploring {} through different perspectives",
+    "The ethics of {}",
+    "How to get started with {}",
+    "The beauty of {}"
+]
+
+
+def generate_diverse_prompts(num_prompts: int, seed: Optional[int] = None) -> List[str]:
+    """Generate diverse prompts by combining topics and templates.
+
+    Args:
+        num_prompts: Number of unique prompts to generate
+        seed: Random seed for reproducibility (None for random)
+
+    Returns:
+        List of generated prompt strings
+    """
+    if seed is not None:
+        random.seed(seed)
+
+    prompts = []
+    for _ in range(num_prompts):
+        topic = random.choice(TOPICS)
+        template = random.choice(PROMPT_TEMPLATES)
+        prompt = template.format(topic)
+        prompts.append(prompt)
+
+    return prompts
 
 
 def generate_training_data(
@@ -18,8 +91,10 @@ def generate_training_data(
     max_length: int = 512,
     temperature: float = 1.0,
     top_p: float = 0.95,
-    seed: Optional[int] = None,
     prompts: Optional[List[str]] = None,
+    num_unique_prompts: Optional[int] = None,
+    use_diverse_prompts: bool = True,
+    prompt_seed: Optional[int] = None,
     tensor_parallel_size: int = 1,
     dtype: str = "auto"
 ) -> List[str]:
@@ -31,8 +106,10 @@ def generate_training_data(
         max_length: Maximum length per sequence
         temperature: Sampling temperature
         top_p: Nucleus sampling parameter
-        seed: Random seed for reproducibility
-        prompts: Optional list of prompts to start from (otherwise uses empty string)
+        prompts: Optional list of prompts to start from
+        num_unique_prompts: Number of unique prompts (will cycle to reach num_sequences)
+        use_diverse_prompts: Whether to use generated diverse prompts
+        prompt_seed: Random seed for prompt generation (None = random prompts)
         tensor_parallel_size: Number of GPUs for tensor parallelism
         dtype: Data type for model weights
 
@@ -52,34 +129,45 @@ def generate_training_data(
 
     print("✓ Model loaded successfully!\n")
 
-    # Set random seed if provided
-    if seed is not None:
-        print(f"Using seed: {seed}")
-
     print(f"Generating {num_sequences} sequences...")
     print(f"  Max length: {max_length}")
     print(f"  Temperature: {temperature}")
     print(f"  Top-p: {top_p}")
+    print(f"  Sampling seed: None (different generations for same prompt)")
 
     # Prepare prompts
     if prompts and len(prompts) > 0:
-        print(f"  Using {len(prompts)} prompts (cycling if needed)")
-        # Cycle through prompts to generate num_sequences
-        input_prompts = [prompts[i % len(prompts)] for i in range(num_sequences)]
+        # Use provided prompts
+        print(f"  Using {len(prompts)} provided prompts")
+        unique_prompts = prompts
+    elif use_diverse_prompts:
+        # Generate diverse prompts from topics and templates
+        n_unique = num_unique_prompts or min(1000, num_sequences)
+        print(f"  Generating {n_unique} diverse prompts from topics and templates")
+        print(f"  Prompt generation seed: {prompt_seed if prompt_seed else 'random'}")
+        unique_prompts = generate_diverse_prompts(n_unique, seed=prompt_seed)
     else:
-        print(f"  Starting from empty string (unconditional)")
-        # Use empty string for unconditional generation
-        input_prompts = [""] * num_sequences
+        # Fallback to minimal prompt
+        print(f"  Using minimal prompt (unconditional)")
+        unique_prompts = ["\n"]
+
+    # Cycle through prompts to generate num_sequences
+    # This allows multiple different generations from the same prompt
+    input_prompts = [unique_prompts[i % len(unique_prompts)] for i in range(num_sequences)]
+
+    if len(unique_prompts) < num_sequences:
+        print(f"  Cycling {len(unique_prompts)} prompts to generate {num_sequences} sequences")
+        print(f"  Each prompt will generate ~{num_sequences // len(unique_prompts)} variations")
 
     print()
 
-    # Configure sampling parameters
+    # Configure sampling parameters - NO SEED for varied generations
     sampling_params = SamplingParams(
         n=1,
         max_tokens=max_length,
         temperature=temperature,
         top_p=top_p,
-        seed=seed,
+        seed=None,  # No seed = different generations for same prompt
     )
 
     # Generate all at once (vLLM batches efficiently)
@@ -132,22 +220,33 @@ def main():
         help="Nucleus sampling top-p (default: 0.95)"
     )
     parser.add_argument(
-        "--seed", "-s",
-        type=int,
-        default=None,
-        help="Random seed for reproducibility (default: None)"
-    )
-    parser.add_argument(
         "--prompts-file",
         type=str,
         default=None,
         help="JSON file with prompts to use as starting points (uses 'prompts' key)"
     )
     parser.add_argument(
+        "--num-unique-prompts",
+        type=int,
+        default=None,
+        help="Number of unique prompts to generate (cycles to reach num-sequences, default: min(1000, num_sequences))"
+    )
+    parser.add_argument(
+        "--prompt-seed",
+        type=int,
+        default=None,
+        help="Random seed for prompt generation (default: None for random prompts)"
+    )
+    parser.add_argument(
+        "--no-diverse-prompts",
+        action="store_true",
+        help="Disable diverse prompt generation (use minimal prompt instead)"
+    )
+    parser.add_argument(
         "--output-dir", "-o",
         type=str,
-        default="training_data",
-        help="Output directory (default: training_data)"
+        default="distillation_text",
+        help="Output directory (default: distillation_text)"
     )
     parser.add_argument(
         "--output-name",
@@ -186,23 +285,25 @@ def main():
         max_length=args.max_length,
         temperature=args.temperature,
         top_p=args.top_p,
-        seed=args.seed,
         prompts=prompts,
+        num_unique_prompts=args.num_unique_prompts,
+        use_diverse_prompts=not args.no_diverse_prompts,
+        prompt_seed=args.prompt_seed,
         tensor_parallel_size=args.tensor_parallel_size,
         dtype=args.dtype
     )
 
     # Create output directory
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = os.path.join(args.output_dir, timestamp)
+    output_dir = args.output_dir
     os.makedirs(output_dir, exist_ok=True)
 
-    # Determine output filename
+    # Determine output filename (no timestamp)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")  # Keep for metadata
     if args.output_name:
         output_name = args.output_name
     else:
         model_safe_name = args.model.replace("/", "_")
-        output_name = f"{model_safe_name}"
+        output_name = model_safe_name
 
     # Save as text file (for supervised distillation)
     text_file = os.path.join(output_dir, f"{output_name}.txt")
@@ -219,8 +320,11 @@ def main():
         "max_length": args.max_length,
         "temperature": args.temperature,
         "top_p": args.top_p,
-        "seed": args.seed,
+        "sampling_seed": None,  # Always None for diverse generations
         "prompts_file": args.prompts_file,
+        "use_diverse_prompts": not args.no_diverse_prompts,
+        "num_unique_prompts": args.num_unique_prompts,
+        "prompt_seed": args.prompt_seed,
         "texts": generated_texts
     }
 

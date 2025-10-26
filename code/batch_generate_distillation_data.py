@@ -32,7 +32,8 @@ def run_generation(
     max_length: int,
     temperature: float,
     top_p: float,
-    seed: int,
+    num_unique_prompts: int,
+    prompt_seed: int,
     prompts_file: str,
     output_dir: str
 ) -> bool:
@@ -66,8 +67,11 @@ def run_generation(
         "--output-dir", model_output_dir,
     ]
 
-    if seed is not None:
-        cmd.extend(["--seed", str(seed)])
+    if num_unique_prompts is not None:
+        cmd.extend(["--num-unique-prompts", str(num_unique_prompts)])
+
+    if prompt_seed is not None:
+        cmd.extend(["--prompt-seed", str(prompt_seed)])
 
     if prompts_file:
         # Resolve prompts file path (check current dir or parent dir)
@@ -131,16 +135,22 @@ def main():
         help="Nucleus sampling top-p (default: 0.95)"
     )
     parser.add_argument(
-        "--seed", "-s",
+        "--num-unique-prompts",
+        type=int,
+        default=None,
+        help="Number of unique prompts to generate (default: min(1000, num_sequences))"
+    )
+    parser.add_argument(
+        "--prompt-seed",
         type=int,
         default=42,
-        help="Random seed for reproducibility (default: 42)"
+        help="Random seed for prompt generation (default: 42, use None for random)"
     )
     parser.add_argument(
         "--prompts-file",
         type=str,
         default=None,
-        help="JSON file with prompts to seed generation (optional)"
+        help="JSON file with prompts to seed generation (optional, overrides diverse prompts)"
     )
     parser.add_argument(
         "--output-dir", "-o",
@@ -178,8 +188,10 @@ def main():
     print(f"Max length: {args.max_length}")
     print(f"Temperature: {args.temperature}")
     print(f"Top-p: {args.top_p}")
-    print(f"Seed: {args.seed}")
-    print(f"Prompts file: {args.prompts_file or 'None (unconditional)'}")
+    print(f"Sampling seed: None (diverse generations)")
+    print(f"Unique prompts: {args.num_unique_prompts or 'auto'}")
+    print(f"Prompt seed: {args.prompt_seed}")
+    print(f"Prompts file: {args.prompts_file or 'None (using diverse topic-based prompts)'}")
     print(f"Output directory: {args.output_dir}")
     print(f"\nModels:")
     for i, model in enumerate(models_to_process, 1):
@@ -210,7 +222,8 @@ def main():
             max_length=args.max_length,
             temperature=args.temperature,
             top_p=args.top_p,
-            seed=args.seed,
+            num_unique_prompts=args.num_unique_prompts,
+            prompt_seed=args.prompt_seed,
             prompts_file=args.prompts_file,
             output_dir=args.output_dir
         )
