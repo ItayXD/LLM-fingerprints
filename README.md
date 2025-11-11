@@ -2,6 +2,8 @@
 
 Test whether language models can be uniquely identified by their responses to out-of-distribution (OOD) queries.
 
+data is : https://huggingface.co/datasets/royrin/model-fingerprints-data/upload/main
+
 ## Concept
 
 Different models (or the same model trained with different hyperparameters/data ordering) are unique functions. By querying them with out-of-distribution prompts (e.g., "8fs234ks2" or "purple cat people like"), we can capture their unique token prediction patterns as "fingerprints."
