@@ -2,3 +2,5 @@ SECRETS
 *png
 *pdf
 data/
+.env
+.DS_Store
