@@ -1,0 +1,15 @@
+{
+  "model": "claude-opus-4-1-20250805",
+  "timestamp": "20251123_013819",
+  "num_sequences": 4410,
+  "successful_sequences": 507,
+  "failed_sequences": 3903,
+  "max_length": 512,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "prompts_file": null,
+  "use_diverse_prompts": true,
+  "num_unique_prompts": null,
+  "prompt_seed": null,
+  "delay_between_calls": 0.1
+}
