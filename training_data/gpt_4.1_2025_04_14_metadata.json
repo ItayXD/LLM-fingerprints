@@ -1,0 +1,15 @@
+{
+  "model": "gpt-4.1-2025-04-14",
+  "timestamp": "20251123_194853",
+  "min_num_sequences": 4410,
+  "successful_sequences": 4410,
+  "failed_sequences": 0,
+  "max_length": 512,
+  "temperature": 0.0,
+  "top_p": 0.95,
+  "prompts_file": null,
+  "use_diverse_prompts": true,
+  "num_unique_prompts": null,
+  "prompt_seed": null,
+  "delay_between_calls": 0.0
+}
