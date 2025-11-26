@@ -1,7 +1,7 @@
 ---
 base_model: meta-llama/Llama-3.2-1B-Instruct
 library_name: peft
-model_name: gpt_4.1_4_llama_model
+model_name: gpt_4.1_2025_04_14_4_llama_model
 tags:
 - base_model:adapter:meta-llama/Llama-3.2-1B-Instruct
 - lora
@@ -12,7 +12,7 @@ licence: license
 pipeline_tag: text-generation
 ---
 
-# Model Card for gpt_4.1_4_llama_model
+# Model Card for gpt_4.1_2025_04_14_4_llama_model
 
 This model is a fine-tuned version of [meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct).
 It has been trained using [TRL](https://github.com/huggingface/trl).
