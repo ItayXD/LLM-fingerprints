@@ -16,7 +16,9 @@ import time
 
 try:
     from dotenv import load_dotenv
-    load_dotenv() 
+    load_dotenv()
+except:
+    pass
 
 # Diverse topics for generating prompts
 TOPICS = [
@@ -99,14 +101,14 @@ def generate_training_data(
     model_name: str,
     min_num_sequences: int = 1000,
     max_length: int = 512,
-    temperature: float = 1.0,
+    temperature: float = 0.0,
     top_p: float = 0.95,
     prompts: Optional[List[str]] = None, 
     num_unique_prompts: Optional[int] = None,
     use_diverse_prompts: bool = True,
     prompt_seed: Optional[int] = None,
     api_key: Optional[str] = None,
-    delay_between_calls: float = 0.1
+    delay_between_calls: float = 0.0
 ) -> List[dict]:
     """Generate text sequences from OpenAI models using OpenAI API.
 
@@ -296,6 +298,12 @@ def main():
         help="JSON file with prompts to use as starting points (uses 'prompts' key)"
     )
     parser.add_argument(
+        "--prompts-jsonl",
+        type=str,
+        default=None,
+        help="JSONL file containing one prompt per line (either a string or object with 'prompt'/'messages')"
+    )
+    parser.add_argument(
         "--num-unique-prompts",
         type=int,
         default=None,
@@ -347,6 +355,19 @@ def main():
             data = json.load(f)
             prompts = data.get('prompts', [])
             print(f"Loaded {len(prompts)} prompts")
+    elif args.prompts_jsonl:
+        print(f"Loading prompts from JSONL: {args.prompts_jsonl}")
+        prompts = []
+        with open(args.prompts_jsonl, 'r') as f:
+            for line_number, line in enumerate(f, start=1):
+                stripped = line.strip()
+                if not stripped:
+                    continue
+                record = json.loads(stripped)
+                if isinstance(record, dict):
+                    if isinstance(record.get("prompt"), str):
+                        prompts.append(record["prompt"])
+        print(f"Loaded {len(prompts)} prompts")
 
     # Generate training data
     generated_data = generate_training_data(
