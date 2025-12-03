@@ -1,165 +1,154 @@
-# Model Fingerprinting
+# Model Fingerprinting & Data Generation Suite
 
-Test whether language models can be uniquely identified by their responses to out-of-distribution (OOD) queries.
+This repository houses scripts and notebooks for fingerprinting language models on out-of-distribution (OOD) prompts, generating synthetic training corpora, and running follow-up analyses (e.g., clustering via latent embeddings). It supports both open-source Hugging Face models and OpenAI-hosted models via synchronous or batch APIs.
 
-data is : https://huggingface.co/datasets/royrin/model-fingerprints-data/upload/main
+Reference dataset: https://huggingface.co/datasets/royrin/model-fingerprints-data/upload/main
 
-## Concept
+## Repository Layout
 
-Different models (or the same model trained with different hyperparameters/data ordering) are unique functions. By querying them with out-of-distribution prompts (e.g., "8fs234ks2" or "purple cat people like"), we can capture their unique token prediction patterns as "fingerprints."
+- `code/fingerprint.py` – main fingerprinting runner against Hugging Face models.
+- `code/generate_training_data_oai.py` – OpenAI-backed generator with batch submit/fetch support.
+- `code/generate_training_data.py`, `generate_training_data_anthropic.py`, `generate_training_data_oai.py` – variants for different providers.
+- `code/batch_*.py` – helpers to submit/aggregate distillation jobs in bulk.
+- `utils/` – shared helpers (API telemetry, model catalogs, etc.).
+- `notebooks/` & `embeddings.ipynb` – exploratory analysis and visualization notebooks.
+- `fingerprints_output/` – default location for generated fingerprints.
 
-## Setup
+## Getting Started
 
 ```bash
-# Install dependencies
+# Install dependencies (uv manages both venv + lockfile)
 uv sync
 
-# Or if you haven't created the venv yet
+# Or create the environment manually
 uv venv
 uv sync
-
-# Generate OOD prompts (creates ood_prompts.json with 1000 prompts)
-uv run python generate_ood_prompts.py
 ```
 
-## Usage
+## Fingerprinting Hugging Face Models
 
-### Basic Commands
+### Core Commands
 
-**Test a single model (default: Llama-3.2-1B)**
-```bash
-uv run python code/fingerprint.py
-```
-
-**Test a specific model**
-```bash
-uv run python code/fingerprint.py meta-llama/Llama-3.2-3B
-```
-
-**Test all models**
-```bash
-uv run python code/fingerprint.py --all
-```
-
-**List available models**
-```bash
-uv run python code/fingerprint.py --list
-```
+- Default run (Llama-3.2-1B):
+  ```bash
+  uv run python code/fingerprint.py
+  ```
+- Specific model:
+  ```bash
+  uv run python code/fingerprint.py meta-llama/Llama-3.2-3B
+  ```
+- All configured models:
+  ```bash
+  uv run python code/fingerprint.py --all
+  ```
+- List available models:
+  ```bash
+  uv run python code/fingerprint.py --list
+  ```
 
 ### Advanced Options
 
-**Custom temperature and seed**
 ```bash
-# Default: greedy decoding (deterministic, T=0.0)
-uv run python code/fingerprint.py --all
-
-# Use sampling with temperature=1.0
+# Sampling instead of greedy
 uv run python code/fingerprint.py --all --temp 1.0
 
-# Use higher temperature for more randomness
+# Higher entropy and explicit seed
 uv run python code/fingerprint.py --all --temp 1.5 --seed 123
 
-# Generate more tokens
+# Generate more tokens per prompt
 uv run python code/fingerprint.py --all --num-tokens 10
 ```
 
-**Available arguments:**
-- `--temperature, --temp, -t` - Sampling temperature (default: 0.0 for greedy, use 1.0 for sampling)
-- `--seed, -s` - Random seed for reproducibility (default: 42)
-- `--num-tokens, -n` - Number of tokens to generate (default: 5)
-- `--prompts-file, -p` - Path to JSON file with prompts (default: ood_prompts.json)
-- `--all` - Test all models
-- `--list` - List available models
+Important arguments:
+- `--temperature/--temp/-t` – decoding temperature (default 0.0).
+- `--seed/-s` – RNG seed (default 42).
+- `--num-tokens/-n` – number of continuation tokens (default 5).
+- `--prompts-file/-p` – JSON file with custom prompts (defaults to `ood_prompts.json`).
+- `--all`, `--list` – bulk execution helpers.
 
-## Models Tested
+### Provider Integrations
 
-1. **meta-llama/Llama-3.2-1B** - 1B parameter Llama model
-2. **meta-llama/Llama-3.2-3B** - 3B parameter Llama model
-3. **Qwen/Qwen2.5-1.5B** - 1.5B dense model
-4. **Qwen/Qwen2.5-3B** - 3B dense model
-5. **Qwen/Qwen1.5-MoE-A2.7B** - Mixture of Experts (~2.7B active)
-6. **01-ai/Yi-1.5-6B** - 6B parameter Yi model
-7. **allenai/OLMo-2-0425-1B** - 1B OLMo model
-8. **EleutherAI/pythia-2.8b** - 2.8B Pythia model
-9. **deepseek-ai/deepseek-coder-6.7b-base** - Code-specialized 6.7B model
+The repo fingerprints both local Hugging Face checkpoints and hosted APIs:
+- **OpenAI** – via `utils/llm_api.py` and `code/generate_training_data_oai.py`, supporting chat completions, batch submissions, and fine-tuning formats.
+- **Anthropic** – through `code/generate_training_data_anthropic.py` and shared helpers so Claude generations can be compared side-by-side with OpenAI and HF baselines.
 
-## Output
+Regardless of source, results land in `fingerprints_output/{timestamp}/` with one JSON per model plus `all_fingerprints.json`, recording the prompt, continuation, token IDs, and decoding metadata.
 
-Results are saved to `fingerprints_output/{timestamp}/` where timestamp is in format `YYYYMMDD_HHMMSS`:
-- Individual JSON files for each model: `{model_name}.json`
-- Combined results: `all_fingerprints.json`
+## Prompt Generation
 
-Example directory structure:
-```
-fingerprints_output/
-├── 20250125_143022/
-│   ├── meta-llama_Llama-3.2-1B.json
-│   ├── Qwen_Qwen2.5-1.5B.json
-│   ├── ...
-│   └── all_fingerprints.json
-└── 20250125_150314/
-    ├── ...
-    └── all_fingerprints.json
-```
-
-Each fingerprint includes:
-- The OOD prompt
-- Generated text (5 tokens)
-- Token IDs
-- Model configuration (temperature, seed, etc.)
-
-## OOD Prompts
-
-### Generating Prompts
-
-Run `generate_ood_prompts.py` to create 1000 OOD prompts:
-
-```bash
-uv run python generate_ood_prompts.py
-```
-
-This creates `ood_prompts.json` with 1000 prompts using various strategies:
-- **Random strings**: `"8fs234ks2"`, `"xqz99ppml"`
-- **Keyboard smashes**: `"asdfghjkl"`, `"qwertyuiop"`
-- **Number/letter mixes**: `"123abc456def"`
-- **Nonsensical phrases**: `"purple cat people like"`, `"rainbow elephants dance"`
-- **Repeated patterns**: `"abcabc123123"`
-- **CamelCase gibberish**: `"QuantumBanana"`, `"CrystalMemory"`
-- **Special chars**: `"test_123-456.abc"`
-- **All caps gibberish**: `"XYZQWERT"`
-- **Hex-like strings**: `"a1b2c3d4e5f6"`
-- **Base64-like strings**: `"dGVzdA=="`
-
-### Custom Prompts File
-
-You can provide your own prompts JSON file:
+Fingerprints rely on high-entropy, out-of-distribution prompts (random strings, nonsensical phrases, pattern repeats, hex/base64-like payloads, etc.). Bring your own prompt list and pass it to `fingerprint.py`:
 
 ```bash
 uv run python code/fingerprint.py --all --prompts-file my_prompts.json
 ```
 
-**JSON format:**
+Expected JSON schema:
+
 ```json
 {
   "description": "My custom prompts",
-  "count": 100,
-  "prompts": [
-    "prompt1",
-    "prompt2",
-    ...
-  ]
+  "prompts": ["prompt1", "prompt2"]
 }
 ```
 
-## Configuration
+## Synthetic Training Data (OpenAI)
 
-**Default settings:**
-- Temperature: 0.0 (greedy decoding, fully deterministic)
-- Seed: 42
-- Num tokens: 5
+`code/generate_training_data_oai.py` produces user/assistant conversations for knowledge distillation. Highlights:
 
-**Edit `code/fingerprint.py` to modify:**
-- `OOD_PROMPTS` - List of prompts to test
-- `TEST_MODELS` - List of models to fingerprint
+- Supports synchronous calls or batch API submissions with `--use-batch`.
+- `--batch-submit-only` uploads a job and exits immediately (safe to close your laptop).
+- `--batch-fetch <BATCH_ID>` downloads finished results later and converts them into JSONL/metadata.
+- `--prompts-file` or `--prompts-jsonl` seed generation with curated prompts instead of random templates.
 
-**Note:** Temperature=0.0 gives fully deterministic greedy decoding. Use `--temp 1.0` with a fixed seed for reproducible but non-greedy sampling, which may better capture model differences on OOD prompts.
+Example synchronous run:
+
+```bash
+uv run python code/generate_training_data_oai.py \
+  --model gpt-4o-mini \
+  --min-num-sequences 200 \
+  --temperature 0.8
+```
+
+Batch submit-only + fetch:
+
+```bash
+# Submit
+uv run python code/generate_training_data_oai.py \
+  --model gpt-4o \
+  --use-batch --batch-submit-only \
+  --output-name gpt4o_batch_2025
+
+# Later, fetch results using the printed batch_id
+uv run python code/generate_training_data_oai.py \
+  --model gpt-4o \
+  --batch-fetch BATCH_ID \
+  --output-name gpt4o_batch_2025
+```
+
+Outputs live in `training_data/` (JSONL plus metadata). Batch metadata records input/output file IDs so you can audit submissions via the OpenAI dashboard.
+
+## Knowledge Distillation & Analysis
+
+- `code/knowledge_distillation.py` and related scripts consume the generated datasets to fine-tune student models.
+- `batch_distill_pairwise.py`, `batch_generate_distillation_data.py`, and `generate_training_data.py` handle larger sweeps or non-OpenAI providers.
+- `embeddings.ipynb` and other notebooks explore latent representations of fingerprints for clustering/visualization.
+
+## Embeddings Notebook (Primary Results)
+
+`embeddings.ipynb` is the main report for downstream fingerprint analysis:
+
+- **Dataset assembly:** loads `encoding_model_analysis/encoding_data/*_embeddings.npz` for GPT-3.5/4.1 variants, Claude 3.5/4.5 family, GPT-4o (⭐), and open models like Llama-3.2; merges them into a shared tensor dataset with per-model labels.
+- **Classical baselines:** evaluates Gaussian Naive Bayes, logistic regression, linear SVM, LDA/QDA, and scikit-learn pipelines with standardized features; confusion matrices highlight which providers are easiest/hardest to separate.
+- **Neural classifier:** trains a multi-layer SiLU network (384→1000→500→100→classes) hitting high test accuracy and macro-F1, plus aggregated confusion plots mapping predictions to normalized probabilities across GPT/Claude families.
+- **Autoencoder + center loss:** builds a joint reconstruction/classification model that learns compact embeddings (`z`) while enforcing per-model cluster centers to stabilize fingerprint geometry.
+- **Dimensionality reduction:** generates PCA, t-SNE, MDS, and UMAP scatter plots (color-coded by provider) to visualize how embeddings cluster by model family and whether OOD prompts collapse subclusters.
+- **Unsupervised clustering:** applies KMeans, Agglomerative, DBSCAN, and HDBSCAN on latent vectors to test blind identification; silhouette/confusion summaries show models remain distinguishable even without labels.
+
+Use this notebook when communicating results—its figures (classification tables, confusion matrices, latent plots) are the authoritative artifacts for the project.
+
+## Notes & Tips
+
+- All scripts rely on environment variables or CLI flags for API keys (`OPENAI_API_KEY`, Anthropic keys, etc.).
+- `uv` manages dependencies via `pyproject.toml` and `uv.lock`—stick with it to keep versions aligned.
+- Fingerprinting is deterministic when `--temp 0.0`; raise the temperature plus seed if you want stochastic fingerprints.
+- Generated fingerprints and training corpora can grow quickly—periodically prune `fingerprints_output/` and `training_data/` to save disk space.
