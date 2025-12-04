@@ -137,14 +137,13 @@ Outputs live in `training_data/` (JSONL plus metadata). Batch metadata records i
 
 `embeddings.ipynb` is the main report for downstream fingerprint analysis:
 
-- **Dataset assembly:** loads `encoding_model_analysis/encoding_data/*_embeddings.npz` for GPT-3.5/4.1 variants, Claude 3.5/4.5 family, GPT-4o (⭐), and open models like Llama-3.2; merges them into a shared tensor dataset with per-model labels.
+- **Dataset assembly:** loads `encoding_model_analysis/encoding_data/*_embeddings.npz` for GPT-3.5/4.1 variants, Claude 3.5/4.5 family, GPT-4o (*), and open models like Llama-3.2; merges them into a shared tensor dataset with per-model labels.
 - **Classical baselines:** evaluates Gaussian Naive Bayes, logistic regression, linear SVM, LDA/QDA, and scikit-learn pipelines with standardized features; confusion matrices highlight which providers are easiest/hardest to separate.
-- **Neural classifier:** trains a multi-layer SiLU network (384→1000→500→100→classes) hitting high test accuracy and macro-F1, plus aggregated confusion plots mapping predictions to normalized probabilities across GPT/Claude families.
+- **Neural classifier:** trains a multi-layer SiLU network (384→5000→100→100→classes) hitting high test accuracy and macro-F1, plus aggregated confusion plots mapping predictions to normalized probabilities across GPT/Claude families.
 - **Autoencoder + center loss:** builds a joint reconstruction/classification model that learns compact embeddings (`z`) while enforcing per-model cluster centers to stabilize fingerprint geometry.
-- **Dimensionality reduction:** generates PCA, t-SNE, MDS, and UMAP scatter plots (color-coded by provider) to visualize how embeddings cluster by model family and whether OOD prompts collapse subclusters.
+- **Dimensionality reduction:** generates PCA, t-SNE, and MDS scatter plots (color-coded by model) to visualize how embeddings cluster by model family and whether OOD prompts collapse subclusters.
 - **Unsupervised clustering:** applies KMeans, Agglomerative, DBSCAN, and HDBSCAN on latent vectors to test blind identification; silhouette/confusion summaries show models remain distinguishable even without labels.
 
-Use this notebook when communicating results—its figures (classification tables, confusion matrices, latent plots) are the authoritative artifacts for the project.
 
 ## Notes & Tips
 
